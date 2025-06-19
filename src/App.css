@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.quiz {
+  margin-bottom: 2rem;
+}
+
+.quiz-option {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  border: 2px solid #efefef;
+  border-radius: 4px;
+  margin: 0.5rem;
+}
+
+.quiz-wrapper>.header {
+  font-size: 1rem;
+}
+
+.quiz>p {
+  font-size: 1.8rem;
+}
+
+.correct, .correct:hover {
+  border-color: green;
+}
+
+.incorrect, .incorrect:hover {
+  border-color: red;
+}
