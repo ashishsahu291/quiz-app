@@ -7,14 +7,15 @@ import Result from "./components/Result";
 
 function App() {
   const [quizStage, setQuizStage] = useState(QUIZ_STAGES.START);
+  const [score, setScore] = useState(0);
   return (
     <div className="quiz-wrapper">
       {quizStage === QUIZ_STAGES.START ? (
         <Start setQuizStage={setQuizStage} />
       ) : quizStage === QUIZ_STAGES.IN_PROGRESS ? (
-        <Quiz setQuizStage={setQuizStage} />
+        <Quiz setQuizStage={setQuizStage} score={score} setScore={setScore} />
       ) : (
-        <Result />
+        <Result score={score} setScore={setScore} setQuizStage={setQuizStage} />
       )}
     </div>
   );

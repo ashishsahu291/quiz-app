@@ -14,9 +14,10 @@ const Option = ({
           ? "correct"
           : label === selectedOption
           ? "incorrect"
-          : "disabled")
+          : "")
       }`}
       onClick={() => setSelectedOption(label)}
+      disabled={!!selectedOption}
     >
       {label}
     </button>

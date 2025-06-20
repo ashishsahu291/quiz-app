@@ -27,9 +27,13 @@
 }
 
 .correct, .correct:hover {
-  border-color: green;
+  border-color: #689f38;
+  color: #689f38;
+  background-color: #e7f6d5;
 }
 
 .incorrect, .incorrect:hover {
-  border-color: red;
+  background-color: #ffdde0;
+  color: #d32f3f;
+  border-color: #d32f3f;
 }

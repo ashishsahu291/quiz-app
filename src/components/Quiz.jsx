@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { QUESTIONS, QUIZ_STAGES } from "../constants/constants";
 import Option from "./Option";
 
-const Quiz = ({ setQuizStage }) => {
+const Quiz = ({ setQuizStage, score, setScore }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
 
   const onNextClick = () => {
+    if (selectedOption === QUESTIONS[currentQuestion].correctAnswer) {
+      setScore(score + 1);
+    }
     if (currentQuestion === QUESTIONS.length - 1) {
       setQuizStage(QUIZ_STAGES.ENDED);
     }
     setCurrentQuestion(currentQuestion + 1);
+    setSelectedOption(null);
   };
 
   return (
